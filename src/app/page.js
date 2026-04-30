@@ -1,8 +1,10 @@
 import Banner from "@/components/Banner";
+import FeaturedTiles from "@/components/FeaturedTiles";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
+    <div>
     <div className="flex flex-col flex-1 items-center justify-center">
       <Banner></Banner>
       <div className="w-full flex-1 flex items-center justify-center mt-20">
@@ -11,5 +13,7 @@ export default function Home() {
         </Marquee>
       </div>
     </div>
+        <FeaturedTiles></FeaturedTiles>
+  </div>
   );
 }

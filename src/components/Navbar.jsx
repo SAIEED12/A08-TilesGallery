@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-2 text-sm font-medium tracking-wider">
+          <ul className="menu menu-horizontal gap-2 text-md font-medium tracking-wider">
             <li><Navlink href="/">HOME</Navlink></li>
             <li><Navlink href="/all-tiles">ALL TILES</Navlink></li>
             <li><Navlink href="/my-profile">MY PROFILE</Navlink></li>
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <Link
             href="/signup"
-            className="btn btn-sm border-none rounded-sm bg-[#e09f2d] text-black font-semibold hover:bg-[#d18706] transition-colors tracking-wide"
+            className="btn btn-md border-none rounded-md bg-[#e09f2d] text-black font-semibold hover:bg-[#d18706] transition-colors tracking-wide"
           >
             Login
           </Link>

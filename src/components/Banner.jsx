@@ -42,10 +42,10 @@ const Banner = () => {
         <h1 className="text-5xl md:text-8xl text-white leading-tight mb-6">
           Discover Your <br />
           Perfect{" "}
-          <span className="text-[#e09f2d] ">Aesthetic</span>
+          <span className="text-[#e09f2d]">Aesthetic</span>
         </h1>
 
-        <p className="text-gray-300 text-base md:text-xl max-w-xl leading-relaxed mb-10">
+        <p className="text-gray-400 text-base md:text-xl max-w-xl leading-relaxed mb-10">
           A gallery of rare and refined tiles — from Moroccan zellige to Italian marble,
           each piece selected for those who design with intention.
         </p>
