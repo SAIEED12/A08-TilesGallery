@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
+import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -87,15 +88,15 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4 text-md text-gray-400">
               <li className="flex items-center gap-3">
-                <span className="text-[#e09f2d]">📍</span>
+                <FaLocationDot className="text-[#e09f2d]" />
                 Dhaka, Bangladesh
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#e09f2d]">✉️</span>
+                <FaEnvelope className="text-[#e09f2d]" />
                 hello@tilesgallery.studio
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#e09f2d]">📞</span>
+                <FaPhone className="text-[#e09f2d]" />
                 +880 1234 567 890
               </li>
             </ul>
