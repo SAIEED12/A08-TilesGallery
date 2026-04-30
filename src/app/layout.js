@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       className={`${cormorantGaramond.className} h-full antialiased`}
       data-theme='dark'
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#0a0a0b]">
         <Navbar></Navbar>
         {children}
         <Footer></Footer>

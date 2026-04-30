@@ -3,7 +3,7 @@ import bannerImg from '@/assets/hero.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Cormorant_Garamond } from 'next/font/google';
-
+import { FaArrowRightLong } from "react-icons/fa6";
 const cormorantGaramond = Cormorant_Garamond({
 subsets: ["latin"],
 weight: ["400"],
@@ -45,7 +45,7 @@ const Banner = () => {
           <span className="text-[#e09f2d] ">Aesthetic</span>
         </h1>
 
-        <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-10">
+        <p className="text-gray-300 text-base md:text-xl max-w-xl leading-relaxed mb-10">
           A gallery of rare and refined tiles — from Moroccan zellige to Italian marble,
           each piece selected for those who design with intention.
         </p>
@@ -53,15 +53,9 @@ const Banner = () => {
         <div className="flex items-center gap-4 flex-wrap justify-center">
           <Link
             href="/all-tiles"
-            className="px-8 py-3 bg-[#e09f2d] text-black font-semibold text-sm tracking-wide hover:bg-[#d18706] transition-colors flex items-center gap-2"
+            className="px-8 py-3 bg-[#e09f2d] text-black font-semibold text-md tracking-wide hover:bg-[#d18706] transition-colors flex items-center gap-2"
           >
-            Browse Now <span>→</span>
-          </Link>
-          <Link
-            href="/all-tiles"
-            className="px-8 py-3 border border-[#e09f2d] text-white text-sm tracking-wide hover:bg-[#e09f2d]/10 transition-colors"
-          >
-            View Collection
+            Browse Now <FaArrowRightLong />
           </Link>
         </div>
 

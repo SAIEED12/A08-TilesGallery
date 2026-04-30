@@ -6,19 +6,10 @@ import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="relative mt-24 text-base">
-      {/* Top Divider */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-      {/* Background */}
       <div className="absolute inset-0 -z-10 bg-[#0a0a0b]" />
-
-      {/* Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
-
-        {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-          {/* Col 1 — Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
               <Image
@@ -34,13 +25,12 @@ const Footer = () => {
               </span>
             </Link>
 
-            <p className="text-md text-gray-400 leading-relaxed max-w-xs">
+            <p className="text-lg text-white/90 leading-relaxed max-w-xs">
               A curated atelier of luxury tiles — sourced from heritage
               workshops and contemporary studios across the world.{" "}
               Every surface, a story.
             </p>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-4">
               <Link href="#" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-[#e09f2d] hover:text-[#e09f2d] transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
@@ -60,12 +50,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Col 2 — Explore */}
           <div className="space-y-6 md:pl-12">
             <h3 className="text-md font-semibold tracking-[0.2em] text-[#e09f2d] uppercase">
               Explore
             </h3>
-            <ul className="space-y-4 text-md text-gray-400">
+            <ul className="space-y-4 text-lg text-white/90">
               {[
                 { label: "Home", href: "/" },
                 { label: "All Tiles", href: "/all-tiles" },
@@ -81,15 +70,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 3 — Contact */}
           <div className="space-y-6">
             <h3 className="text-md font-semibold tracking-[0.2em] text-[#e09f2d] uppercase">
               Contact Us
             </h3>
-            <ul className="space-y-4 text-md text-gray-400">
+            <ul className="space-y-4 text-lg text-white/90">
               <li className="flex items-center gap-3">
                 <FaLocationDot className="text-[#e09f2d]" />
-                Dhaka, Bangladesh
+                14 Rue de Sèvres, Paris, France
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-[#e09f2d]" />
@@ -103,14 +91,12 @@ const Footer = () => {
           </div>
 
         </div>
+        
+        <div className="mt-16 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
-        {/* Divider */}
-        <div className="mt-16 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        {/* Bottom Bar */}
-        <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-md text-white/70">
           <p>© {new Date().getFullYear()} Tiles Gallery. Crafted with reverence.</p>
-          <p className="tracking-[0.25em] text-gray-600 uppercase text-[10px]">
+          <p className="tracking-[0.25em] text-[#e09f2d] uppercase text-[15px]">
             Curated · Refined · Eternal
           </p>
         </div>
