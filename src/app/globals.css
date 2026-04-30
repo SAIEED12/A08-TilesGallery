@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+@plugin "daisyui";
 
 @layer utilities {
   .bg-gradient-gold {
-    background: linear-gradient(to right, #f59e0b, #d97706);
+    background: linear-gradient(to right, #f59e0b, #e09f2d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

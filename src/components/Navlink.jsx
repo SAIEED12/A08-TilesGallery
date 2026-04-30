@@ -7,7 +7,7 @@ const Navlink = ({href, children}) => {
     const pathname = usePathname()
     const isActive = href == pathname 
     return (
-        <Link href={href} className={`${isActive ? "bg-gradient-gold font-bold":"hover:text-[#f59e0b]"} `}>{children}</Link>
+        <Link href={href} className={`${isActive ? "bg-gradient-gold font-bold":"hover:text-[#e09f2d]"} `}>{children}</Link>
     );
 };
 
