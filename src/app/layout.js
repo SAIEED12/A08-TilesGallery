@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const cormoranGaramond = Cormorant_Garamond({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${cormoranGaramond.className} h-full antialiased`}
+      className={`${cormorantGaramond.className} h-full antialiased`}
       data-theme='dark'
     >
       <body className="min-h-full flex flex-col">
