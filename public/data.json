@@ -9,7 +9,9 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "Studio Arhoj",
+    "tags": ["Modern", "Glossy", "Blue"]
   },
   {
     "id": "tile_002",
@@ -21,7 +23,9 @@
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Glass",
-    "inStock": true
+    "inStock": true,
+    "creator": "AquaSurface",
+    "tags": ["Minimalist", "Vibrant", "Blue"]
   },
   {
     "id": "tile_003",
@@ -33,7 +37,9 @@
     "currency": "USD",
     "dimensions": "40x40 cm",
     "material": "Clay",
-    "inStock": true
+    "inStock": true,
+    "creator": "EarthBorn Ceramics",
+    "tags": ["Rustic", "Natural", "Earth-Tones"]
   },
   {
     "id": "tile_004",
@@ -45,7 +51,9 @@
     "currency": "USD",
     "dimensions": "10x30 cm",
     "material": "Ceramic",
-    "inStock": false
+    "inStock": false,
+    "creator": "Verdant Walls",
+    "tags": ["Elegant", "Glossy", "Green"]
   },
   {
     "id": "tile_005",
@@ -57,7 +65,9 @@
     "currency": "USD",
     "dimensions": "20x20 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "PopColor Studio",
+    "tags": ["Contemporary", "Bold", "Orange"]
   },
   {
     "id": "tile_006",
@@ -69,7 +79,9 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Porcelain",
-    "inStock": true
+    "inStock": true,
+    "creator": "Urban Loft Designs",
+    "tags": ["Industrial", "Minimalist", "Black"]
   },
   {
     "id": "tile_007",
@@ -81,7 +93,9 @@
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "Heritage Tiles",
+    "tags": ["Traditional", "Patterned", "Blue"]
   },
   {
     "id": "tile_008",
@@ -93,7 +107,9 @@
     "currency": "USD",
     "dimensions": "25x25 cm",
     "material": "Glass",
-    "inStock": true
+    "inStock": true,
+    "creator": "ZenSurfaces",
+    "tags": ["Modern", "Calm", "Teal"]
   },
   {
     "id": "tile_009",
@@ -105,7 +121,9 @@
     "currency": "USD",
     "dimensions": "45x45 cm",
     "material": "Porcelain",
-    "inStock": true
+    "inStock": true,
+    "creator": "Pastel Palace",
+    "tags": ["Minimalist", "Soft", "Pink"]
   },
   {
     "id": "tile_010",
@@ -117,7 +135,9 @@
     "currency": "USD",
     "dimensions": "60x120 cm",
     "material": "Limestone",
-    "inStock": true
+    "inStock": true,
+    "creator": "Quarry Masters",
+    "tags": ["Natural", "Textured", "Cream"]
   },
   {
     "id": "tile_011",
@@ -129,7 +149,9 @@
     "currency": "USD",
     "dimensions": "20x20 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "Botanical Art Co.",
+    "tags": ["Artistic", "Floral", "White"]
   },
   {
     "id": "tile_012",
@@ -141,7 +163,9 @@
     "currency": "USD",
     "dimensions": "30x60 cm",
     "material": "Ceramic",
-    "inStock": false
+    "inStock": false,
+    "creator": "Velvet Glaze Lab",
+    "tags": ["Luxurious", "Matte", "Purple"]
   },
   {
     "id": "tile_013",
@@ -153,6 +177,8 @@
     "currency": "USD",
     "dimensions": "15x15 cm",
     "material": "Clay",
-    "inStock": true
+    "inStock": true,
+    "creator": "Old World Tiles",
+    "tags": ["Vintage", "Warm", "Yellow"]
   }
 ]

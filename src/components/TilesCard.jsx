@@ -18,7 +18,7 @@ const TilesCard = ({ tile }) => {
       <div className="p-4 space-y-1">
         <h3 className="text-2xl  text-white">{tile.title}</h3>
         <p className="text-md text-gray-400 leading-relaxed">{tile.description}</p>
-        <Link href='/' className="text-[#e09f2d] hover:text-[#f9c74f] text-lg font-medium"> 
+        <Link href={`/all-tiles/${tile.id}`} className="text-[#e09f2d] hover:text-[#f9c74f] text-lg font-medium"> 
           View Details <GoArrowUpRight className="inline" />
         </Link>
         
