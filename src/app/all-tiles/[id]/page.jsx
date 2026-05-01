@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import { toast, Zoom } from "react-toastify";
 const DetailsPage = async ({ params }) => {
   const { id } = await params;
   const res = await fetch("https://tiles-gallery-ten.vercel.app/data.json", {
