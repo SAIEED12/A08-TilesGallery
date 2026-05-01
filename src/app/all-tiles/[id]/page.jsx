@@ -10,20 +10,6 @@ const DetailsPage = async ({ params }) => {
   const tiles = await res.json();
   const tile = tiles.find((tile) => tile.id === id);
 
-  const handleAddToCart = () => {
-    toast.success("Added To Cart!", {
-      position: "bottom-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Zoom,
-    });
-  };
-
   return (
     <div className="min-h-screen bg-[#0a0a0b] px-6 py-16">
       <div className="max-w-7xl mx-auto">
@@ -99,7 +85,7 @@ const DetailsPage = async ({ params }) => {
                 </p>
               </div>
               <button
-                onClick={handleAddToCart}
+                
                 className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer"
               >
                 Add To Cart
