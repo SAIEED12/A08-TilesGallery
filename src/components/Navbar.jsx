@@ -3,25 +3,58 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import Navlink from "./Navlink";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  }
   return (
     <div className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-sm bg-background/80">
       <div className="navbar max-w-7xl mx-auto px-4">
-
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
               </svg>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow-lg rounded-box z-50 bg-[#0f0f0f] border border-white/10 text-white">
-              <li><Link href="/">HOME</Link></li>
-              <li><Link href="/all-tiles">ALL TILES</Link></li>
-              <li><Link href="/my-profile">MY PROFILE</Link></li>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow-lg rounded-box z-50 bg-[#0f0f0f] border border-white/10 text-white"
+            >
+              <li>
+                <Link href="/">HOME</Link>
+              </li>
+              <li>
+                <Link href="/all-tiles">ALL TILES</Link>
+              </li>
+              <li>
+                <Link href="/my-profile">MY PROFILE</Link>
+              </li>
               <li className="mt-2">
-                <Link href="/login" className="bg-[#e09f2d] text-black font-semibold rounded-sm text-center hover:bg-[#d18706]">
+                <Link
+                  href="/login"
+                  className="bg-[#e09f2d] text-black font-semibold rounded-sm text-center hover:bg-[#d18706]"
+                >
                   Login
                 </Link>
               </li>
@@ -45,21 +78,43 @@ const Navbar = () => {
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal gap-2 text-md font-medium tracking-wider">
-            <li><Navlink href="/">HOME</Navlink></li>
-            <li><Navlink href="/all-tiles">ALL TILES</Navlink></li>
-            <li><Navlink href="/my-profile">MY PROFILE</Navlink></li>
+            <li>
+              <Navlink href="/">HOME</Navlink>
+            </li>
+            <li>
+              <Navlink href="/all-tiles">ALL TILES</Navlink>
+            </li>
+            <li>
+              <Navlink href="/my-profile">MY PROFILE</Navlink>
+            </li>
           </ul>
         </div>
 
         <div className="navbar-end">
-          <Link
-            href="/login"
-            className="btn btn-md border-none rounded-md bg-[#e09f2d] text-black font-semibold hover:bg-[#d18706] transition-colors tracking-wide"
-          >
-            Login
-          </Link>
+          {!user && (
+            <Link
+              href="/login"
+              className="btn btn-md border-none rounded-md bg-[#e09f2d] text-black font-semibold hover:bg-[#d18706] transition-colors tracking-wide"
+            >
+              Login
+            </Link>
+          )}
+          {user && (
+            <div className="flex gap-4 justify-center items-center">
+              <Avatar className="cursor-pointer" href="/my-profile">
+                <Avatar.Image
+                  alt={user.name}
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+              </Avatar>
+          <Button onClick={handleSignOut} variant="danger" >
+            Log Out
+          </Button>
+            </div>
+          )}
         </div>
-
       </div>
     </div>
   );

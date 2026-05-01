@@ -96,7 +96,7 @@ export default function SignInPage() {
               className="w-full bg-[#e09f2d] text-black font-semibold text-md tracking-wide
                          py-3 rounded-sm hover:bg-[#d18706] transition-colors mt-2 cursor-pointer"
             >
-              Sign In
+              Login
             </button>
 
           </Form>
