@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import { toast, Zoom } from "react-toastify";
 const DetailsPage = async ({ params }) => {
 
   const { id } = await params;
@@ -9,6 +10,20 @@ const DetailsPage = async ({ params }) => {
 })
   const tiles = await res.json();
   const tile = tiles.find((tile) => tile.id === id);
+
+  const handleAddToCart = () => {
+    toast.success("Added To Cart!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] px-6 py-16">
@@ -81,7 +96,7 @@ const DetailsPage = async ({ params }) => {
                   <span className="text-lg text-gray-400 ml-2">{tile.currency}</span>
                 </p>
               </div>
-              <button className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer">
+              <button onClick={handleAddToCart} className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer">
                  Add To Cart
               </button>
             </div>
