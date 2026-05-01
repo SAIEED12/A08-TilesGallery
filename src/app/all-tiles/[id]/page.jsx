@@ -77,7 +77,7 @@ const DetailsPage = async ({ params }) => {
               <div>
                 <p className="text-lg text-white uppercase tracking-widest mb-1">Price</p>
                 <p className="text-5xl font-semibold text-[#e09f2d]">
-                  ${tile.price}
+                  ${tile.price.toFixed(2)}
                   <span className="text-lg text-gray-400 ml-2">{tile.currency}</span>
                 </p>
               </div>
