@@ -3,27 +3,26 @@ import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 import { toast, Zoom } from "react-toastify";
 const DetailsPage = async ({ params }) => {
-
   const { id } = await params;
-  const res = await fetch("https://tiles-gallery-ten.vercel.app/data.json", { 
-  cache: 'no-store'
-})
+  const res = await fetch("https://tiles-gallery-ten.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const tiles = await res.json();
   const tile = tiles.find((tile) => tile.id === id);
 
   const handleAddToCart = () => {
     toast.success("Added To Cart!", {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Zoom,
-      });
-  }
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Zoom,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] px-6 py-16">
@@ -36,7 +35,6 @@ const DetailsPage = async ({ params }) => {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-
           <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/5">
             <Image
               src={tile.image}
@@ -60,19 +58,19 @@ const DetailsPage = async ({ params }) => {
               {tile.title}
             </h1>
 
-
             <p className="text-white text-lg">
-              Creator: <span className="text-[#e09f2d] text-lg">{tile.creator}</span>
+              Creator:{" "}
+              <span className="text-[#e09f2d] text-lg">{tile.creator}</span>
             </p>
 
             <div className="h-px bg-white/30" />
 
-            <p className="text-gray-300 text-xl">
-              {tile.description}
-            </p>
-            
+            <p className="text-gray-300 text-xl">{tile.description}</p>
+
             <div>
-              <p className="text-md uppercase text- font-bold mb-5 mt-5">Style Tags</p>
+              <p className="text-md uppercase text- font-bold mb-5 mt-5">
+                Style Tags
+              </p>
               <div className="flex gap-2 cursor-pointer">
                 {tile.tags.map((tag) => (
                   <span
@@ -90,17 +88,23 @@ const DetailsPage = async ({ params }) => {
 
             <div className="flex items-center justify-between pt-2">
               <div>
-                <p className="text-lg text-white uppercase tracking-widest mb-1">Price</p>
+                <p className="text-lg text-white uppercase tracking-widest mb-1">
+                  Price
+                </p>
                 <p className="text-5xl font-semibold text-[#e09f2d]">
                   ${tile.price.toFixed(2)}
-                  <span className="text-lg text-gray-400 ml-2">{tile.currency}</span>
+                  <span className="text-lg text-gray-400 ml-2">
+                    {tile.currency}
+                  </span>
                 </p>
               </div>
-              <button onClick={handleAddToCart} className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer">
-                 Add To Cart
+              <button
+                onClick={handleAddToCart}
+                className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer"
+              >
+                Add To Cart
               </button>
             </div>
-
           </div>
         </div>
       </div>
