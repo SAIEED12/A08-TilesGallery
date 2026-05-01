@@ -76,7 +76,7 @@ const DetailsPage = async ({ params }) => {
                 <p className="text-lg text-white uppercase tracking-widest mb-1">Price</p>
                 <p className="text-5xl font-semibold text-[#e09f2d]">
                   ${tile.price}
-                  <span className="text-sm text-gray-400 ml-1">{tile.currency}</span>
+                  <span className="text-lg text-gray-400 ml-2">{tile.currency}</span>
                 </p>
               </div>
               <button className="px-8 py-3 text-md font-semibold rounded-sm bg-[#c4851a] hover:bg-[#e09f2d]/90 cursor-pointer">

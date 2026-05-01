@@ -14,19 +14,34 @@
     "tags": ["Modern", "Glossy", "Blue"]
   },
   {
-    "id": "tile_002",
-    "title": "Azure Pool Mosaic",
-    "description": "Small format square tiles in a bright azure blue for aquatic environments.",
-    "image": "https://images.unsplash.com/photo-1550820946-1c6f7b8e2030?q=80&w=800&auto=format&fit=crop",
-    "category": "mosaic",
-    "price": 38.00,
+    "id": "tile_007",
+    "title": "Mediterranean Pattern",
+    "description": "Traditional blue and white motifs inspired by coastal architecture.",
+    "image": "https://images.unsplash.com/photo-1579542118192-bc83c1965c15?q=80&w=800&auto=format&fit=crop",
+    "category": "patterned",
+    "price": 62.00,
     "currency": "USD",
     "dimensions": "30x30 cm",
-    "material": "Glass",
+    "material": "Ceramic",
     "inStock": true,
-    "creator": "AquaSurface",
-    "tags": ["Minimalist", "Vibrant", "Blue"]
+    "creator": "Heritage Tiles",
+    "tags": ["Traditional", "Patterned", "Blue"]
   },
+  {
+    "id": "tile_013",
+    "title": "Classic Ochre Square",
+    "description": "Golden ochre tones with a subtle weathered edge for a vintage look.",
+    "image": "https://images.unsplash.com/photo-1594847915592-2a7ef568e2b6?q=80&w=800&auto=format&fit=crop",
+    "category": "terracotta",
+    "price": 31.50,
+    "currency": "USD",
+    "dimensions": "15x15 cm",
+    "material": "Clay",
+    "inStock": true,
+    "creator": "Old World Tiles",
+    "tags": ["Vintage", "Warm", "Yellow"]
+  },
+  
   {
     "id": "tile_003",
     "title": "Terra Cotta Earth",
@@ -83,20 +98,7 @@
     "creator": "Urban Loft Designs",
     "tags": ["Industrial", "Minimalist", "Black"]
   },
-  {
-    "id": "tile_007",
-    "title": "Mediterranean Pattern",
-    "description": "Traditional blue and white motifs inspired by coastal architecture.",
-    "image": "https://images.unsplash.com/photo-1579542118192-bc83c1965c15?q=80&w=800&auto=format&fit=crop",
-    "category": "patterned",
-    "price": 62.00,
-    "currency": "USD",
-    "dimensions": "30x30 cm",
-    "material": "Ceramic",
-    "inStock": true,
-    "creator": "Heritage Tiles",
-    "tags": ["Traditional", "Patterned", "Blue"]
-  },
+
   {
     "id": "tile_008",
     "title": "Teal Wave Mosaic",
@@ -168,17 +170,18 @@
     "tags": ["Luxurious", "Matte", "Purple"]
   },
   {
-    "id": "tile_013",
-    "title": "Classic Ochre Square",
-    "description": "Golden ochre tones with a subtle weathered edge for a vintage look.",
-    "image": "https://images.unsplash.com/photo-1594847915592-2a7ef568e2b6?q=80&w=800&auto=format&fit=crop",
-    "category": "terracotta",
-    "price": 31.50,
+    "id": "tile_002",
+    "title": "Azure Pool Mosaic",
+    "description": "Small format square tiles in a bright azure blue for aquatic environments.",
+    "image": "https://images.unsplash.com/photo-1550820946-1c6f7b8e2030?q=80&w=800&auto=format&fit=crop",
+    "category": "mosaic",
+    "price": 38.00,
     "currency": "USD",
-    "dimensions": "15x15 cm",
-    "material": "Clay",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
     "inStock": true,
-    "creator": "Old World Tiles",
-    "tags": ["Vintage", "Warm", "Yellow"]
+    "creator": "AquaSurface",
+    "tags": ["Minimalist", "Vibrant", "Blue"]
   }
+
 ]

@@ -21,7 +21,7 @@ const Navbar = () => {
               <li><Link href="/all-tiles">ALL TILES</Link></li>
               <li><Link href="/my-profile">MY PROFILE</Link></li>
               <li className="mt-2">
-                <Link href="/signup" className="bg-[#e09f2d] text-black font-semibold rounded-sm text-center hover:bg-[#d18706]">
+                <Link href="/login" className="bg-[#e09f2d] text-black font-semibold rounded-sm text-center hover:bg-[#d18706]">
                   Login
                 </Link>
               </li>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         <div className="navbar-end">
           <Link
-            href="/signup"
+            href="/login"
             className="btn btn-md border-none rounded-md bg-[#e09f2d] text-black font-semibold hover:bg-[#d18706] transition-colors tracking-wide"
           >
             Login
