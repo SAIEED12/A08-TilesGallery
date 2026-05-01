@@ -4,7 +4,9 @@ import { IoArrowBack } from "react-icons/io5";
 const DetailsPage = async ({ params }) => {
 
   const { id } = await params;
-  const res = await fetch("https://tiles-gallery-ten.vercel.app/data.json");
+  const res = await fetch("https://tiles-gallery-ten.vercel.app/data.json", { 
+  cache: 'no-store'
+})
   const tiles = await res.json();
   const tile = tiles.find((tile) => tile.id === id);
 
