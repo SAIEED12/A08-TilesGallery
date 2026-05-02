@@ -2,7 +2,6 @@
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import toast from "react-hot-toast";
 
 const UpdateProfilePage = () => {
   const router = useRouter();
@@ -11,29 +10,23 @@ const UpdateProfilePage = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
-
-    const toastId = toast.loading("Updating profile...");
-    try {
-      await authClient.updateUser({ name, image });
-      toast.success("Profile updated!", { id: toastId });
-      router.push("/my-profile");
-    } catch (err) {
-      toast.error("Update failed. Try again.", { id: toastId });
-    }
+    
+    await authClient.updateUser({ name, image });
+    router.refresh();
+    router.push("/my-profile");
   };
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-[0.3em] text-[#e09f2d] mb-3">✦ My Profile</p>
           <h1 className="text-4xl font-semibold text-white">Update Information</h1>
           <p className="text-gray-500 text-sm mt-3">Change your name or profile picture</p>
         </div>
+
         <div className="bg-[#111113] border border-white/10 rounded-xl p-8 space-y-6">
           <form onSubmit={onSubmit} className="flex flex-col gap-5">
-
             <div className="flex flex-col gap-1.5">
               <label className="text-xs uppercase tracking-widest text-gray-400">
                 Full Name
@@ -65,6 +58,7 @@ const UpdateProfilePage = () => {
             </div>
 
             <div className="h-px bg-white/10" />
+            
             <div className="flex gap-3">
               <Link
                 href="/my-profile"
@@ -81,10 +75,8 @@ const UpdateProfilePage = () => {
                 Update Information
               </button>
             </div>
-
           </form>
         </div>
-
       </div>
     </div>
   );
