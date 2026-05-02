@@ -25,7 +25,7 @@ export default function RegistrationPage() {
 
     console.log({ data, error });
     if (!error) {
-      router.push("/");
+      router.push("/login");
     } else {
       toast.error(`${error.message}`, {
         position: "bottom-right",

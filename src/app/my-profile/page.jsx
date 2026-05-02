@@ -1,7 +1,8 @@
 "use client";
-import { UpdateUserModal } from "@/components/UpdateUserModal";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
+import Link from "next/link";
+import { BiEdit } from "react-icons/bi";
 const MyProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
@@ -18,7 +19,15 @@ const MyProfilePage = () => {
         </Avatar>
         <h2 className="text-2xl font-semibold text-white">{user?.name}</h2>
         <p className="text-gray-400 text-lg">{user?.email}</p>
-        <UpdateUserModal></UpdateUserModal>
+        <Link
+          href="/my-profile/update"
+          className="flex items-center gap-2 px-5 py-2.5 border border-[#e09f2d]/40
+             text-[#e09f2d] text-sm font-medium tracking-wide rounded-sm
+             hover:bg-[#e09f2d]/10 transition-colors"
+        >
+          <BiEdit />
+          Update Profile
+        </Link>
       </Card>
     </div>
   );
